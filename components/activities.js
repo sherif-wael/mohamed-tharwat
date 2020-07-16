@@ -19,6 +19,12 @@ const StyledHeader = styled.div`
         box-shadow: 0 8px 30px rgb(0, 0, 0, 0.12);
         background-color: ${props => props.theme.colors.primary};
         border-radius: 30px;
+        ${media(400)`
+            font-size: 22px;
+        `}
+        ${media(260)`
+            font-size: 20px;
+        `}
     }
 `
 
