@@ -72,6 +72,7 @@ const StyledActivity = styled.div`
 
 const StyledImg = styled.div`
     position: relative;
+    overflow: hidden;
     img{
         width: 100%;
         height: 140px;
