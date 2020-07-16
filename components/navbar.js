@@ -19,6 +19,12 @@ const StyledLogo = styled.a`
     text-decoration: none;
     font-weight: 700;
     z-index: 6;
+    ${media(600)`
+        font-size: 26px;
+    `}
+    ${media(270)`
+        font-size: 22px;
+    `}
 `
 
 
@@ -65,7 +71,7 @@ const StyledNav = styled.nav`
             border-radius: 20px;
         }
         ${media(600)`
-            margin: 0 0 15px;
+            margin: 0 0 25px;
         `}
     }
     &.nav-active{
