@@ -60,6 +60,12 @@ const StyledActivity = styled.div`
         box-sizing: border-box;
         color: ${props => props.theme.colors.primary};
         border-right: 6px solid ${props => props.theme.colors.secondary};
+        ${media(400)`
+            font-size: 20px;
+        `}
+        ${media(260)`
+            font-size: 18px;
+        `}
     }
 `
 
