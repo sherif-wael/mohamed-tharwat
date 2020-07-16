@@ -3,6 +3,7 @@ import GlobalStyles from "../styles/global"
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Main from "../styles/main"
+import Phone from "./phone"
 
 function Layout({children}){
     return (
@@ -13,6 +14,7 @@ function Layout({children}){
                 <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&family=Tajawal&display=swap" rel="stylesheet"></link>
             </Head>
             <GlobalStyles />
+            <Phone />
             <Navbar />
             <Main>
                 {children}
