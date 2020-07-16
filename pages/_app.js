@@ -3,7 +3,10 @@ import { ThemeProvider } from 'styled-components'
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: '#003366',
+    secondary: "#FF0080",
+    yellow: "#CCFF33",
+    fushia: "#FF0080"
   },
 }
 

@@ -7,9 +7,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "google-maps-react": "^2.0.6",
+    "mongodb": "^3.5.9",
     "next": "latest",
+    "next-connect": "^0.8.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "react-responsive": "^8.1.0",
+    "react-transition-group": "^4.4.1",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
