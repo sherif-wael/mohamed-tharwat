@@ -14,7 +14,7 @@ const StyledInfo = styled.ul`
     padding: 30px 50px;
     background-color: rgb(0, 0, 0, 0.06);
     border-radius: 10px;
-    box-shadow: 2px 2px 25px rgb(0, 0, 0, 0.12);
+    box-shadow: 2px 8px 20px -8px rgb(0, 0, 0, 0.2);
     ${media(960)`
         padding: 25px 35px;
     `}
