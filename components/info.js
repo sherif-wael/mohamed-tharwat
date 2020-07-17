@@ -15,7 +15,10 @@ const StyledInfo = styled.ul`
     background-color: rgb(0, 0, 0, 0.06);
     border-radius: 10px;
     box-shadow: 2px 2px 25px rgb(0, 0, 0, 0.12);
-    ${media(450)`
+    ${media(960)`
+        padding: 25px 35px;
+    `}
+    ${media(600)`
         padding: 20px 25px;
     `}
         li{
@@ -39,7 +42,7 @@ const StyledInfo = styled.ul`
 function Info(){
     return (
         <StyledContainer>
-            <Header><h2 style={{textAlign: "center"}}>كما يعمل د/ محمد ثروت</h2></Header>
+            <Header><h2 style={{textAlign: "center"}}>بالإضافة الى</h2></Header>
             <StyledInfo dir="rtl" style={{marginBottom: "60px"}}>
                     <li>استشاري  الروماتيزم و المناعة بمستشفي دار الفؤاد و مستشفي مصر الدولي</li>
                     <li>مدرس الباطنة و الروماتيزم و المناعة بجامعة نيو جيزة</li>
