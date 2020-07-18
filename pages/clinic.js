@@ -4,7 +4,6 @@ import Map from "../components/map";
 import Schedule from  "../components/schedule";
 import Register from "../components/register";
 import Slider from "../components/slider";
-import {useMediaQuery} from "react-responsive";
 
 const StyledMapWrapper = styled.div`
     height: 400px;
@@ -19,10 +18,9 @@ const imgs = [
 ]
 
 export default function Clinic(){
-    let isMobile = useMediaQuery({query: "(max-width: 600px)"});
     return (
         <Layout>
-            <Slider height={isMobile ? "400px" : "500px"} imgs={imgs} />
+            <Slider imgs={imgs} />
             {/* <StyledMapWrapper>
                 <Map />
             </StyledMapWrapper> */}

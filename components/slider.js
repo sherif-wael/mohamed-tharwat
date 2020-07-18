@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import mixins from "../styles/mixins";
 import media from "../styles/media";
@@ -13,8 +13,11 @@ const StyledSlider = styled.div`
 
 const StyledSlides = styled.div`
     white-space: nowrap;
-    height: ${props => props.height};
+    height: 500px;
     transition: transform 600ms ease;
+    ${media(600)`
+        height: 400px;
+    `}
 `
 
 const StyledPhoto = styled.div`
@@ -47,19 +50,11 @@ const StyledToggler = styled.span`
 `
 
 
-function Slider({imgs, height}){
+function Slider({imgs}){
     let [state, setState] = useState(0);
-    useEffect(() => {
-        let interval = setInterval(() => {
-            setState(prev => (prev + 1) % imgs.length)
-        }, 4000)
-        return () => {
-            clearInterval(interval)
-        }
-    }, [])
     return (
         <StyledSlider>
-            <StyledSlides style={{transform: `translateX(${state * 100 * -1}%)`}} height={height}>
+            <StyledSlides style={{transform: `translateX(${state * 100 * -1}%)`}}>
                 {
                     imgs.map((img, i) => (
                         <StyledPhoto key={i}>
