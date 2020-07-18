@@ -6,7 +6,7 @@ const StyledContainer = styled.div`
     margin-bottom: 30px;
     .carousel{
         height: 500px;
-        width: 800px;
+        max-width: 800px;
         margin: 0 auto;
         ${media(600)`
             height: 400px;
