@@ -13,7 +13,7 @@ function Layout({children}){
                 <title>Dr. Mohamed Tharwat</title>
                 <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&family=Tajawal&display=swap" rel="stylesheet"></link>
                 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-                <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+                {/* <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> */}
             </Head>
             <GlobalStyles />
             <Phone />
