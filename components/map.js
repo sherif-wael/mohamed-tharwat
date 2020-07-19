@@ -14,10 +14,10 @@ function MapContainer({google}){
             google={google}
             zoom={17}
             style={mapStyles}
-            initialCenter={{lat: 30.0138002, lng: 31.1975525}}
+            initialCenter={{lat: 30.013479, lng: 31.1999057}}
         >
             
-            <Marker position={{lat: 30.0138002, lng:31.1975525}} />
+            <Marker position={{lat: 30.013479, lng: 31.1999057}} />
         </Map>
     )
 }
