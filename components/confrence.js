@@ -5,6 +5,8 @@ import mixins from "../styles/mixins";
 import media from "../styles/media";
 import conferences from "../lib/conferences";
 import {useMediaQuery} from "react-responsive";
+import {CSSTransition} from "react-transition-group";
+
 
 const StyledContainer = styled.div`
     ${mixins.smallSidePaddings};
@@ -122,22 +124,24 @@ function Conference(){
             <StyledGrid>
                 {
                     displayedConferences.map(({description, photos}, i) => (
-                        <StyledConference key={i}>
-                            <StyledGallery>
-                                <Flickity 
-                                    className="carousel"
-                                    elementType="div"
-                                    static
-                                    >
-                                        {
-                                            photos.map((photo, i) => (
-                                                <img src={photo} alt="conference image" key={i} />
-                                            ))
-                                        }
-                                </Flickity>
-                            </StyledGallery>
-                                <h3>{description}</h3>
-                        </StyledConference>
+                        <CSSTransition classNames="fadeup" timeout={500} appear in={true}>
+                            <StyledConference key={i}>
+                                <StyledGallery>
+                                    <Flickity 
+                                        className="carousel"
+                                        elementType="div"
+                                        static
+                                        >
+                                            {
+                                                photos.map((photo, i) => (
+                                                    <img src={photo} alt="conference image" key={i} />
+                                                ))
+                                            }
+                                    </Flickity>
+                                </StyledGallery>
+                                    <h3>{description}</h3>
+                            </StyledConference>
+                        </CSSTransition>
                     ))
                 }
             </StyledGrid>
