@@ -128,8 +128,8 @@ const StyledShowMore = styled.div`
 
 function Activities(){
     let [showMore, setShowMore] = useState(false);
-    let tablet = useMediaQuery({query: "(max-width: 1024px)"});
     let notMobile = useMediaQuery({query: "(min-width: 740px)"});
+    let tablet = useMediaQuery({query: "(max-width: 1024px)"});
     let max = tablet && notMobile ? 4 : 3;
     let displayedActivities = showMore ? activities : activities.slice(0, max);
     return (
@@ -158,7 +158,7 @@ function Activities(){
                         ))
                     }
             </StyledActivites>
-            { max !== activities.length && 
+            { !(activities.length <= max) && 
                 <StyledShowMore>
                     <button onClick={() => setShowMore(!showMore)}>
                        {showMore ? "عرض أقل" : "عرض المزيد"}

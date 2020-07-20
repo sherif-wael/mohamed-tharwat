@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import Layout from "../components/layout";
 import Intro from "../components/intro";
 import Activities from "../components/activities";
-import Info from "../components/info"
+import Info from "../components/info";
+import Conference from "../components/confrence";
 
 const Title = styled.h1`
   font-size: 50px;
@@ -14,6 +15,7 @@ export default function Home() {
     <Layout>
       <Intro />
       <Info />
+      <Conference />
       <Activities />
     </Layout>
   )
