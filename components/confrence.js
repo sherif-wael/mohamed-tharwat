@@ -130,6 +130,7 @@ function Conference(){
                                     <Flickity 
                                         className="carousel"
                                         elementType="div"
+                                        reloadOnUpdate
                                         static
                                         >
                                             {
