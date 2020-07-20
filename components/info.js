@@ -45,10 +45,10 @@ function Info(){
             <Header><h2 style={{textAlign: "center"}}>بالإضافة الى</h2></Header>
             <StyledInfo dir="rtl" style={{marginBottom: "60px"}}>
                     <li>استشاري  الروماتيزم و المناعة بمستشفي دار الفؤاد و مستشفي مصر الدولي</li>
-                    <li>مدرس الباطنة و الروماتيزم و المناعة بجامعة نيو جيزة</li>
-                    <li><Link href="/clinic"><a>العيادة</a></Link> فيصل : برج الأطباء- اول شارع فيصل- بجانب سوبر ماركت اولاد رجب- الدور العاشر</li>
+                    <li>مدرس الباطنة و الروماتيزم و المناعة، بكلية الطب، جامعة نيو جيزة</li>
                     <li>نائب رئيس التحرير للمجلة <a href="https://ejrci.journals.ekb.eg/journal/editorial.board">المصرية لأمراض الروماتيزم
 و المناعة الاكلينيكية</a></li>
+                    <li><Link href="/clinic"><a>العيادة</a></Link> فيصل : برج الأطباء- اول شارع فيصل- بجانب سوبر ماركت اولاد رجب- الدور العاشر</li>
             </StyledInfo>
             <Header><h2 style={{textAlign: "center"}}>عضو بهذه الجمعيات</h2></Header>
             <StyledInfo dir="rtl">

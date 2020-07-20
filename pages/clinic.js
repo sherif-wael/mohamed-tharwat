@@ -18,9 +18,9 @@ export default function Clinic(){
     return (
         <Layout>
             <Carousel />
-            {/* <StyledMapWrapper>
+            <StyledMapWrapper>
                 <Map />
-            </StyledMapWrapper> */}
+            </StyledMapWrapper>
             <Schedule />
             <Register />
         </Layout>
