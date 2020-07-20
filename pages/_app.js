@@ -1,6 +1,5 @@
 import App from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import "flickity/css/flickity.css";
 
 const theme = {
   colors: {
