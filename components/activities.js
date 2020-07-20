@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import mixins from "../styles/mixins";
 import media from "../styles/media";
-import {TransitionGroup, CSSTransition} from "react-transition-group";
+import {CSSTransition} from "react-transition-group";
 import {useMediaQuery} from "react-responsive";
 import activities from "../lib/activites";
 
@@ -140,7 +140,7 @@ function Activities(){
             <StyledActivites>
                     {
                         displayedActivities.map(({img, header, ankers}, i) => (
-                            <CSSTransition key={i} timeout={500} classNames="fadeup" in={true} appear>
+                            <CSSTransition key={i} timeout={500} classNames="fadeup" in={true} appear key={i}>
                                 <StyledActivity>
                                     <StyledImg>
                                         <img src={img} alt="activity img" />

@@ -124,8 +124,8 @@ function Conference(){
             <StyledGrid>
                 {
                     displayedConferences.map(({description, photos}, i) => (
-                        <CSSTransition classNames="fadeup" timeout={500} appear in={true}>
-                            <StyledConference key={i}>
+                        <CSSTransition classNames="fadeup" timeout={500} appear in={true} key={i}>
+                            <StyledConference>
                                 <StyledGallery>
                                     <Flickity 
                                         className="carousel"
@@ -138,7 +138,7 @@ function Conference(){
                                                 ))
                                             }
                                     </Flickity>
-                                </StyledGallery>
+                                </StyledGallery> 
                                     <h3>{description}</h3>
                             </StyledConference>
                         </CSSTransition>

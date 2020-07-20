@@ -15,7 +15,7 @@ export default function Home() {
     <Layout>
       <Intro />
       <Info />
-      {/* <Conference /> */}
+      <Conference />
       <Activities />
     </Layout>
   )
