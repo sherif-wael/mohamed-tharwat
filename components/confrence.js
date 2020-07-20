@@ -127,7 +127,7 @@ function Conference(){
                         <CSSTransition classNames="fadeup" timeout={500} appear in={true} key={i}>
                             <StyledConference>
                                 <StyledGallery>
-                                    <Flickity 
+                                    {/* <Flickity 
                                         className="carousel"
                                         elementType="div"
                                         static
@@ -137,7 +137,7 @@ function Conference(){
                                                     <img src={photo} alt="conference image" key={i} />
                                                 ))
                                             }
-                                    </Flickity>
+                                    </Flickity> */}
                                 </StyledGallery> 
                                     <h3>{description}</h3>
                             </StyledConference>
