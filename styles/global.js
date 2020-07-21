@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import transitions from "./transitions";
+import media from "./media";
 
 const GlobalStyles = createGlobalStyle`
     body{

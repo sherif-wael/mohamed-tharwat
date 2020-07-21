@@ -6,7 +6,7 @@ import media from "../styles/media";
 import conferences from "../lib/conferences";
 import {useMediaQuery} from "react-responsive";
 import {CSSTransition} from "react-transition-group";
-
+import Slider from "./slider"
 
 const StyledContainer = styled.div`
     ${mixins.smallSidePaddings};
@@ -75,14 +75,10 @@ const StyledConference = styled.div`
 `
 
 const StyledGallery = styled.div`
-    .carousel{
-        height: 250px;
-        margin: 0 auto;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
+  img{
+      height: 250px;
+      width: 100%;
+  }
 `
 
 const StyledShowMore = styled.div`
@@ -127,19 +123,19 @@ function Conference(){
                         <CSSTransition classNames="fadeup" timeout={500} appear in={true} key={i}>
                             <StyledConference>
                                 <StyledGallery>
-                                    <Flickity 
+                                   {/* <Flickity
                                         className="carousel"
                                         elementType="div"
                                         reloadOnUpdate
-                                        static
-                                        >
+                                        static>
                                             {
-                                                photos.map((photo, i) => (
-                                                    <img src={photo} alt="conference image" key={i} />
+                                                photos.map((img, i) => (
+                                                    <img src={img} key={i} alt="conference image" />
                                                 ))
                                             }
-                                    </Flickity>
-                                </StyledGallery> 
+                                        </Flickity> */}
+                                        <Slider images={photos} maxHeight={250} />
+                                </StyledGallery>
                                     <h3>{description}</h3>
                             </StyledConference>
                         </CSSTransition>

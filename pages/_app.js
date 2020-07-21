@@ -1,5 +1,5 @@
-import App from 'next/app'
-import { ThemeProvider } from 'styled-components'
+import App from 'next/app';
+import { ThemeProvider } from 'styled-components';
 
 const theme = {
   colors: {
