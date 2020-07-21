@@ -67,6 +67,16 @@ const StyledActivity = styled.div`
             font-size: 18px;
         `}
     }
+    &:nth-of-type(3){
+        ${media(1024)`
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        `}
+        ${media(740)`
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        `}
+    }
 `
 
 

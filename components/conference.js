@@ -75,8 +75,10 @@ const StyledConference = styled.div`
 
 const StyledGallery = styled.div`
   img{
-      height: 220px;
+      height: 230px;
       width: 100%;
+      display: block;
+      overflow: hidden;
   }
 `
 
