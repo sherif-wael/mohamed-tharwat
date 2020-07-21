@@ -5,15 +5,16 @@ import media from "../styles/media"
 const StyledContainer = styled.div`
     .carousel{
         .dots{
+            width: 28px;
+            height: 28px;
             &:focus, &:active{
                 outline: none;
-                
             }
             svg{
                 width: 12px;
                 height: 12px;
                 circle{
-                    fill: rgb(255, 255, 255, 0.7);
+                    fill: rgb(255, 255, 255, 0.9);
                     cx: 5;
                     cy: 5;
                     r: 5
