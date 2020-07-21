@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Map from "../components/map";
 import Schedule from  "../components/schedule";
 import Register from "../components/register";
-import Carousel from "../components/carousel";
+import Carousel from "../components/clinic-carousel";
 
 
 
@@ -18,9 +18,9 @@ export default function Clinic(){
     return (
         <Layout>
             <Carousel />
-            <StyledMapWrapper>
+            {/* <StyledMapWrapper>
                 <Map />
-            </StyledMapWrapper>
+            </StyledMapWrapper> */}
             <Schedule />
             <Register />
         </Layout>

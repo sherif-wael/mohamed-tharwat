@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Intro from "../components/intro";
 import Activities from "../components/activities";
 import Info from "../components/info";
-import Conference from "../components/confrence";
+import Conference from "../components/conference";
 
 const Title = styled.h1`
   font-size: 50px;

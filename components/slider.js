@@ -43,7 +43,7 @@ let defaultControlsConfig = {
 
 
 
-function Slider({images, maxHeight, minHeight}){
+function Slider({images}){
     let prevButton = ({previousSlide}) => {
         return <button onClick={previousSlide} className="btn"><img src="/images/return.svg" alt="return img" /></button>
     }
@@ -51,7 +51,7 @@ function Slider({images, maxHeight, minHeight}){
         return <button onClick={nextSlide} className="btn"><img src="/images/next.svg" alt="next img" /></button>
     }
     return (
-        <StyledContainer maxHeight={maxHeight} minHeight={minHeight}>
+        <StyledContainer>
             <Carousel defaultControlsConfig={defaultControlsConfig} 
                 renderCenterLeftControls={prevButton}
                 renderCenterRightControls={nextButton}

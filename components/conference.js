@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Flickity from "react-flickity-component";
 import styled from "styled-components";
 import mixins from "../styles/mixins";
 import media from "../styles/media";
@@ -76,7 +75,7 @@ const StyledConference = styled.div`
 
 const StyledGallery = styled.div`
   img{
-      height: 250px;
+      height: 220px;
       width: 100%;
   }
 `
@@ -123,18 +122,7 @@ function Conference(){
                         <CSSTransition classNames="fadeup" timeout={500} appear in={true} key={i}>
                             <StyledConference>
                                 <StyledGallery>
-                                   {/* <Flickity
-                                        className="carousel"
-                                        elementType="div"
-                                        reloadOnUpdate
-                                        static>
-                                            {
-                                                photos.map((img, i) => (
-                                                    <img src={img} key={i} alt="conference image" />
-                                                ))
-                                            }
-                                        </Flickity> */}
-                                        <Slider images={photos} maxHeight={250} />
+                                    <Slider images={photos} />
                                 </StyledGallery>
                                     <h3>{description}</h3>
                             </StyledConference>
