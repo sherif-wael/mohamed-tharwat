@@ -6,7 +6,7 @@ export default function Post(){
     return (
         <Layout>
             <StyledPost>
-                <h2><span>ت عليمات و نصائح لمرضى الذئبة الحمراء</span></h2>
+                <h2><span>تعليمات و نصائح لمرضى الذئبة الحمراء</span></h2>
                 <img src="/images/red-wolf.jpg" alt="systematic lopus erythematic" />
                 <h3>:ما هي الذئبة الحمراء</h3>
                 <p>هي مرض مناعي من امراض المناعة ال ذاتية، بمعني أن جهاز المناعة في الجسم (الذي يحمي الجسم عادة من العدو) يهاجم أنسجتك و أعضائك المختلفة كما لو كانت غريبة</p>
