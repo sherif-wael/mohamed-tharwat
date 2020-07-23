@@ -19,7 +19,7 @@ const StyledLogo = styled.a`
     text-decoration: none;
     font-weight: 700;
     z-index: 6;
-    ${media(600)`
+    ${media(640)`
         font-size: 26px;
     `}
     ${media(270)`
@@ -52,7 +52,7 @@ const StyledToggler = styled.div`
     &.nav-active span:nth-of-type(3){
         transform: translateY(-6px) rotate(-45deg);
     }
-    ${media(600)`
+    ${media(640)`
         display: block;
     `}
 `
@@ -62,7 +62,7 @@ const StyledNav = styled.nav`
     a{
         text-decoration: none;
         color: ${props => props.theme.colors.primary};
-        padding: 3px 12px;
+        padding: 5px 12px;
         font-size: 18px;
         margin: 0 10px 0 0;
         &.selected{
@@ -70,14 +70,14 @@ const StyledNav = styled.nav`
             color: #fff;
             border-radius: 20px;
         }
-        ${media(600)`
+        ${media(640)`
             margin: 0 0 25px;
         `}
     }
     &.nav-active{
         transform: translate(0px);
     }
-    ${media(600)`
+    ${media(640)`
         position: fixed;
         z-index: 5;
         top: 0;
@@ -104,6 +104,7 @@ function Navbar(){
             <StyledNav className={state ? "nav-active" : ""}>
                 <Link href="/"><a className={router.pathname === "/" ? "selected" : ""}>الصفحة الرئيسية</a></Link>
                 <Link href="/clinic"><a className={router.pathname === "/clinic" ? "selected" : ""}>العيادة</a></Link>
+                <Link href="/posts"><a className={router.pathname === "/posts" ? "selected" : ""}>المقالات</a></Link>
             </StyledNav>
         </StyledContainer>
     )
