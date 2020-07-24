@@ -8,7 +8,7 @@ export default function Post(){
         <Layout>
             <StyledPost>
                 <h2><span>تعليمات و نصائح لمرضي النقرس</span></h2>
-                <img src="/images/gout.jpg" alt="gout case" />
+                <img src="/images/gout.jpeg" alt="gout case" />
                 <h3>:هناك العديد من العوامل التي تزيد من خطر إصابة الشخص بالنقرس ، بما في ذلك</h3>
                 <ul>
                     <li>السمنة</li>

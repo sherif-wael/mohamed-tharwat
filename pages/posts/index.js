@@ -11,6 +11,7 @@ const StyledContainer = styled.div`
     ${mixins.sidePaddings};
     color: ${props => props.theme.colors.primary};
     font-size: 20px;
+    margin-bottom: 40px;
     ${media(600)`
         font-size: 18px;
     `}
@@ -45,8 +46,8 @@ const StyledPosInterface = styled.div`
     padding-bottom: 10px;
     grid-template-columns: 1fr;
     grid-template-rows: 150px auto 40px;
-    box-shadow: 4px 8px 10px -6px rgb(0, 0, 0, 0.3),
-                -4px 8px 10px -8px rgb(0, 0, 0, 0.3);
+    box-shadow: 4px 8px 10px -6px rgb(0, 0, 0, 0.2),
+                -4px 8px 10px -8px rgb(0, 0, 0, 0.2);
     overflow: hidden;
     &:hover img{
         transform: scale(1.2);

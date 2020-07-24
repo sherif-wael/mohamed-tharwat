@@ -52,7 +52,7 @@ const StyledToggler = styled.div`
     &.nav-active span:nth-of-type(3){
         transform: translateY(-6px) rotate(-45deg);
     }
-    ${media(640)`
+    ${media(750 )`
         display: block;
     `}
 `
@@ -70,14 +70,14 @@ const StyledNav = styled.nav`
             color: #fff;
             border-radius: 20px;
         }
-        ${media(640)`
+        ${media(750)`
             margin: 0 0 25px;
         `}
     }
     &.nav-active{
         transform: translate(0px);
     }
-    ${media(640)`
+    ${media(750)`
         position: fixed;
         z-index: 5;
         top: 0;
@@ -104,7 +104,7 @@ function Navbar(){
             <StyledNav className={state ? "nav-active" : ""}>
                 <Link href="/"><a className={router.pathname === "/" ? "selected" : ""}>الصفحة الرئيسية</a></Link>
                 <Link href="/clinic"><a className={router.pathname === "/clinic" ? "selected" : ""}>العيادة</a></Link>
-                <Link href="/posts"><a className={router.pathname === "/posts" ? "selected" : ""}>المقالات</a></Link>
+                <Link href="/posts"><a className={router.pathname === "/posts" ? "selected" : ""}>نصائح للمرضى</a></Link>
             </StyledNav>
         </StyledContainer>
     )
