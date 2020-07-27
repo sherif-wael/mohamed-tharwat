@@ -5,9 +5,8 @@ import media from "../styles/media"
 const StyledContainer = styled.div`
     .carousel{
         .dots{
-            width: 24px;
-            height: 24px;
-            margin-right: 4px;
+            width: 36px;
+            height: 36px;
             &:focus, &:active{
                 outline: none;
             }
