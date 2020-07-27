@@ -73,6 +73,26 @@ const StyledLine = styled.p`
     text-align: center;
 `
 
+const StyledPhones = styled.div`
+    ${mixins.flexCenter};
+    flex-wrap: wrap;
+    margin-top: 10px;
+    a{
+        margin: 10px;
+        background-color: ${props => props.theme.colors.secondary};
+        padding: 7px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #fff;
+    }
+    ${media(300)`
+        ${mixins.flexColumnCenter};
+        a{
+            margin: 0 0 15px;
+        }
+    `}
+`
+
 let days = ["الجمعة", "السبت", "الاحد", "الاثنين", "الثلاثاء" , "الاربعاء", "الخميس"];
 let openings = ["", "", "3:00-5:00 PM", "", "", "", "1:00-8:00 PM"];
 
@@ -84,8 +104,13 @@ function Schedule(){
                 <h2>مواعيد العمل</h2>
             </StyledHeader>
             <StyledLine>
-                *الحجز مسبقا
+                الحجز مسبقا تليفونيا من خلال الارقام التالية*
             </StyledLine>
+            <StyledPhones>
+                    <a href="tel:+01272901101">01272901101</a>
+                    <a href="tel:+01006436844">01006436844</a>
+                    <a href="tel:01092909409">01092909409</a>
+            </StyledPhones>
             <StyledToggler>
                 <button onClick={() => setState(state - 1)} disabled={state <= 0}>
                     <img src="/images/upload.png" alt="down arrow image" />
