@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
 
 const StyledHeader = styled.div`
     ${mixins.flexCenter};
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     h2{
         padding: 10px 25px;
         color: #fff;
@@ -67,8 +67,14 @@ const StyledWrapper = styled.div`
     `}
 `
 
+const StyledLine = styled.p`
+    color: ${props => props.theme.colors.primary};
+    font-size: 20px;
+    text-align: center;
+`
+
 let days = ["الجمعة", "السبت", "الاحد", "الاثنين", "الثلاثاء" , "الاربعاء", "الخميس"];
-let openings = ["", "7:30 PM-10:00 PM", "", "7:30 PM-10:00 PM", "", "", "8:00 PM-1:00 AM"];
+let openings = ["", "", "3:00-5:00 PM", "", "", "", "1:00-8:00 PM"];
 
 function Schedule(){
     let [state, setState] = useState(0);
@@ -77,6 +83,9 @@ function Schedule(){
             <StyledHeader>
                 <h2>مواعيد العمل</h2>
             </StyledHeader>
+            <StyledLine>
+                *الحجز مسبقا
+            </StyledLine>
             <StyledToggler>
                 <button onClick={() => setState(state - 1)} disabled={state <= 0}>
                     <img src="/images/upload.png" alt="down arrow image" />
