@@ -80,9 +80,10 @@ const StyledHeader = styled.div`
 
 const StyledPhones = styled.div`
     ${mixins.flexCenter};
+    flex-wrap: wrap;
     margin-top: 10px;
     a{
-        margin-right: 15px;
+        margin: 10px;
         background-color: ${props => props.theme.colors.secondary};
         padding: 7px 15px;
         border-radius: 20px;
@@ -124,6 +125,7 @@ function Intro(){
                 <StyledPhones>
                     <a href="tel:+01272901101">01272901101</a>
                     <a href="tel:+01006436844">01006436844</a>
+                    <a href="tel:01092909409">01092909409</a>
                 </StyledPhones>
             </StyledInfo>
         </StyledContainer>
