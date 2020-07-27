@@ -68,7 +68,7 @@ const StyledWrapper = styled.div`
 `
 
 let days = ["الجمعة", "السبت", "الاحد", "الاثنين", "الثلاثاء" , "الاربعاء", "الخميس"];
-let openings = ["", "7:30-10:00 PM", "", "7:30-10:00 PM", "", "", "7:30-10:00 PM"];
+let openings = ["", "7:30 PM-10:00 PM", "", "7:30 PM-10:00 PM", "", "", "8:00 PM-1:00 AM"];
 
 function Schedule(){
     let [state, setState] = useState(0);
