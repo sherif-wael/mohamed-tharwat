@@ -1,5 +1,7 @@
 import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
+import Router from "next/router";
+import withGA from "next-ga";
 
 const theme = {
   colors: {
@@ -10,7 +12,7 @@ const theme = {
   },
 }
 
-export default class MyApp extends App {
+class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
@@ -20,3 +22,5 @@ export default class MyApp extends App {
     )
   }
 }
+
+export default withGA("UA-173947665-1", Router)(MyApp)
