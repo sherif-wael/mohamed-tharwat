@@ -111,7 +111,7 @@ export default function AdminPage(){
                 {
                     state.data.map(({name, tel, date, _id}, i) => (
                         <div className="order" key={i}>
-                            <Moment format="DD-MM-YYYY HH:mm">{date}</Moment>
+                            <Moment format="DD-MM-YYYY HH:mm A">{date}</Moment>
                             <p className="field" style={{marginTop: "5px"}}>:الاسم</p>
                             <p className="value">{name}</p>
                             <p className="field">:التليفون</p>
