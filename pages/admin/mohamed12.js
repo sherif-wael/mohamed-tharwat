@@ -6,7 +6,7 @@ import GlobalStyles from "../../styles/global";
 import Head from "next/head";
 import axios from "axios";
 import {CSSTransition} from "react-transition-group";
-
+import Moment from "react-moment";
 
 
 const StyledState = styled.div`
@@ -32,22 +32,20 @@ const StyledHeader = styled.header`
 const StyledData = styled.div`
     ${mixins.sidePaddings};
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px 25px;
-    ${media(600)`
-        grid-template-columns: repeat(3, 1fr);
+    ${media(850)`
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 25px 20px;
     `}
-    ${media(360)`
+    ${media(450)`
         grid-template-columns: 1fr;
         grid-gap: 20px;
     `}
-    a{
-        text-decoration: none;
-    }
     .order{
         color: ${props => props.theme.colors.primary};
-        padding: 10px 30px;
+        padding: 10px 10px;
+        box-sizing: border-box;
         box-shadow: 0px 4px 8px 2px rgb(0, 0, 0, 0.15);
         text-align: center;
         transition: transform 200ms ease;
@@ -64,6 +62,19 @@ const StyledData = styled.div`
     }
 `
 
+const StyledButton = styled.div`
+    margin-bottom: 5px;
+    text-align: center;
+    button{
+        background-color: ${props => props.theme.colors.secondary};
+        color: #fff;
+        padding: 4px 8px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+    }
+`
+
 export default function AdminPage(){
     let [state, setState] = useState({data: null, error: null});
     useEffect(() => {
@@ -71,7 +82,13 @@ export default function AdminPage(){
             .get("/api/register")
             .then(res => setState({...state, data: res.data.users}))
             .catch(err => setState({...state, error: err.response.data.message}))
-    })
+    }, [])
+    let deleteOrder = id => {
+        axios
+            .delete("/api/register", {data: {id}})
+            .then(() => setState({...state, data: state.data.filter(user => user._id !== id)}))
+            .catch(err => setState({...state, error: err.response.data.message}))
+    }
     if(state.error){
         return <StyledState>{state.error}</StyledState>
     }
@@ -92,15 +109,15 @@ export default function AdminPage(){
             </StyledHeader>
             <StyledData>
                 {
-                    state.data.map(({name, tel}, i) => (
-                        <a href={`tel:${tel}`}>
-                            <div className="order" key={i}>
-                                <p className="field">:الاسم</p>
-                                <p className="value">{name}</p>
-                                <p className="field">:التليفون</p>
-                                <p className="value">{tel}</p>
-                            </div>
-                        </a>
+                    state.data.map(({name, tel, date, _id}, i) => (
+                        <div className="order" key={i}>
+                            <Moment format="DD-MM-YYYY HH:mm">{date}</Moment>
+                            <p className="field" style={{marginTop: "5px"}}>:الاسم</p>
+                            <p className="value">{name}</p>
+                            <p className="field">:التليفون</p>
+                            <p className="value">{tel}</p>
+                            <StyledButton><button onClick={() => deleteOrder(_id)}>delete</button></StyledButton>
+                        </div>
                     ))
                 }
             </StyledData>
