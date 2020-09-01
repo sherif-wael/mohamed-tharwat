@@ -1,4 +1,4 @@
-import StyledPost from "../../styles/post-styles";
+import PostWrapper from "../../components/post-wrapper";
 import Layout from "../../components/layout";
 import styled from "styled-components";
 
@@ -6,7 +6,7 @@ import styled from "styled-components";
 export default function Post(){
     return (
         <Layout>
-            <StyledPost>
+            <PostWrapper>
                 <h2><span>تعليمات و نصائح لمرضي النقرس</span></h2>
                 <img src="/images/gout.jpeg" alt="gout case" />
                 <h3>:هناك العديد من العوامل التي تزيد من خطر إصابة الشخص بالنقرس ، بما في ذلك</h3>
@@ -74,7 +74,7 @@ export default function Post(){
                     <li>المشروبات السكريه: مثل عصائر الفاكهه عاليه السكر , مشروبات الغازيه</li>
                     <li>الخمائر الغذائيه, العيش االبيض والكيك</li>
                 </ol>
-            </StyledPost>
+            </PostWrapper>
         </Layout>
     )
 }

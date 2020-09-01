@@ -1,11 +1,11 @@
 import Layout from "../../components/layout";
-import StyledPost from "../../styles/post-styles";
+import PostWrapper from "../../components/post-wrapper";
 
 
 export default function Post(){
     return (
         <Layout>
-            <StyledPost>
+            <PostWrapper>
                 <h2><span>تعليمات و نصائح لمرضى الذئبة الحمراء</span></h2>
                 <img src="/images/red-wolf.jpeg" alt="systematic lopus erythematic" />
                 <h3>:ما هي الذئبة الحمراء</h3>
@@ -55,7 +55,7 @@ export default function Post(){
                         </ul>
                     </li>
                 </ol>
-            </StyledPost>
+            </PostWrapper>
         </Layout>
     )
 }

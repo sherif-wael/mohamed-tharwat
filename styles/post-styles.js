@@ -1,7 +1,13 @@
 import styled from "styled-components";
-
+import media from "./media";
 
 const StyledPost = styled.div`
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
     text-align: right;
     color: ${props => props.theme.colors.primary};
     max-width: 900px;
@@ -32,6 +38,29 @@ const StyledPost = styled.div`
         padding-right: 15px;
         li{
             margin: 10px 0;
+        }
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 20px 0;
+        grid-gap: 20px;
+        ${media(650)`
+            grid-template-columns: 1fr;
+            .grid-img{
+                order: 1;
+            }
+        `}
+        p{
+            font-size: 0.8em;
+            text-align: center;
+        }
+        .grid-img{
+            margin: auto;
+            img{
+                min-width: 300px;
+            }
         }
     }
 `

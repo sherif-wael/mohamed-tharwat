@@ -1,11 +1,11 @@
 import Layout from "../../components/layout";
-import StyledPost from "../../styles/post-styles";
+import PostWrapper from "../../components/post-wrapper";
 
 
 export default function Post(){
     return (
         <Layout>
-            <StyledPost>
+            <PostWrapper>
                 <h2><span> التعلميات و نصائح لمرضى الروماتويد</span></h2>
                 <img src="/images/rheumatology.jpg" alt="rheumatology image" />
                 <h3>:ما هو الروماتويد</h3>
@@ -44,7 +44,7 @@ export default function Post(){
                         </ul>
                     </li>
                 </ol>
-            </StyledPost>
+            </PostWrapper>
         </Layout>
     )
 }
