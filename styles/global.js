@@ -7,7 +7,8 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         // font-family: 'Markazi Text', serif;
-        font-family: 'Tajawal', sans-serif;
+        // font-family: 'Tajawal', sans-serif;
+        font-family: "Times New Roman", Times, serif;
     }
     ${transitions};
 `

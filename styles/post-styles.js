@@ -15,6 +15,7 @@ const StyledPost = styled.div`
     min-height: 100vh;
     box-sizing: border-box;
     padding: 10px;
+    font-family: "Times New Roman", Times, serif;
     font-size: calc(18px + (26 - 18) * ((100vw - 260px) / (1700 - 260)));
     img{
         display: block;

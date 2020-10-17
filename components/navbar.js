@@ -63,7 +63,7 @@ const StyledNav = styled.nav`
         text-decoration: none;
         color: ${props => props.theme.colors.primary};
         padding: 5px 12px;
-        font-size: 18px;
+        font-size: 20px;
         margin: 0 10px 0 0;
         &.selected{
             background-color: ${props => props.theme.colors.primary};
