@@ -6,7 +6,6 @@ import Register from "../components/register";
 import Carousel from "../components/clinic-carousel";
 
 
-
 const StyledMapWrapper = styled.div`
     height: 400px;
     position: relative;
