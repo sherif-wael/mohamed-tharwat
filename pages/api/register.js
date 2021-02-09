@@ -41,7 +41,9 @@ handler
                     <p>Tel: ${req.body.tel}</p>
                     <a href="https://mohamedtharwat.com/admin/mohamed12">view applications</a>
                    `
-                   transporter.sendMail({...mailOptions, html}, err => console.log(err));
+                   transporter.sendMail({...mailOptions, html}, err => {
+                       if(err) console.log(err);
+                   });
                    return res.json({success: true})
                })
                .catch(err => res.status(400).json({messgae: "internal server error"}))
