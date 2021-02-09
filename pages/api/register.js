@@ -29,24 +29,28 @@ const handler = nextConnect();
 
 handler
     .use(middleware)
-    .post((req, res) => {
+    .post( async (req, res) => {
         let validation = validateData(req.body);
         if(!validation.isValid){
             return res.status(400).json({message: validation.error})
         }
-        req.db.collection("register").insertOne({name: req.body.name, tel: req.body.tel, date: new Date()})
-               .then(user => {
-                   let html = `
-                    <h3>Name: ${req.body.name}</h3>
-                    <p>Tel: ${req.body.tel}</p>
-                    <a href="https://mohamedtharwat.com/admin/mohamed12">view applications</a>
-                   `
-                   transporter.sendMail({...mailOptions, html}, err => {
-                       if(err) console.log(err);
-                   });
-                   return res.json({success: true})
-               })
-               .catch(err => res.status(400).json({messgae: "internal server error"}))
+
+        try{
+            await req.db.collection("register")
+                        .insertOne({name: req.body.name, tel: req.body.tel, date: new Date()})
+            
+            let html = `
+                <h3>Name: ${req.body.name}</h3>
+                <p>Tel: ${req.body.tel}</p>
+                <a href="https://mohamedtharwat.com/admin/mohamed12">view applications</a>
+            `
+
+            await transporter.sendMail({...mailOptions, html});
+
+            return res.json({succes: true});
+        }catch(err){
+            return res.status(400).json({messgae: "internal server error"})
+        }
     })
     .get((req, res) => {
         req.db.collection("register").find({}).toArray()
