@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "google-maps-react": "^2.0.6",
     "gray-matter": "^4.0.2",
     "moment": "^2.27.0",
