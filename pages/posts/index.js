@@ -42,6 +42,7 @@ const StyledPostsWrapper = styled.div`
 const StyledPosInterface = styled.div`
     margin: 0 auto;
     max-width: 450px;
+    width: 100%;
     box-sizing: border-box;
     display: grid;
     padding-bottom: 10px;

@@ -124,7 +124,6 @@ function Intro(){
                 <p>العيادة: برج الاطباء - اول شارع فيصل - الدور العاشر</p>
                 <StyledPhones>
                     <a href="tel:+01272901101">01272901101</a>
-                    <a href="tel:+01006436844">01006436844</a>
                     <a href="tel:01092909409">01092909409</a>
                 </StyledPhones>
             </StyledInfo>
