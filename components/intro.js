@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import media from "../styles/media";
 import mixins from "../styles/mixins";
-
+import Link from "next/link";
 
 const StyledContainer = styled.section`
     ${mixins.sidePaddings};
@@ -44,13 +44,13 @@ const StyledInfo = styled.div`
     color: #fff;
     text-align: center;
     p{
-        font-size: 22px;
+        font-size: 24px;
         margin: 15px 0;
         ${media(600)`
-            font-size: 20px
+            font-size: 22px
         `}
         ${media(400)`
-            font-size: 18px;
+            font-size: 20px;
         `}
     }
 `
@@ -59,6 +59,7 @@ const StyledHeader = styled.div`
     ${mixins.flexCenter};
     h2{
         position: relative;
+        font-size: 32px;
         &::after{
             ${mixins.after};
             top: 100%;
@@ -73,7 +74,7 @@ const StyledHeader = styled.div`
             transform-origin: right;
         }
         ${media(400)`
-            font-size: 22px;
+            font-size: 26px;
         `}
     }
 `
@@ -89,6 +90,7 @@ const StyledPhones = styled.div`
         border-radius: 20px;
         text-decoration: none;
         color: #fff;
+        font-size: 18px;
     }
     ${media(300)`
         ${mixins.flexColumnCenter};
@@ -125,6 +127,9 @@ function Intro(){
                 <StyledPhones>
                     <a href="tel:+01272901101">01272901101</a>
                     <a href="tel:01092909409">01092909409</a>
+                    <Link href="/posts">
+                        <a>نصائح للمرضي</a>
+                    </Link>
                 </StyledPhones>
             </StyledInfo>
         </StyledContainer>

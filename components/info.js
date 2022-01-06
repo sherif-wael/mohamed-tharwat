@@ -24,11 +24,11 @@ const StyledInfo = styled.ul`
         li{
             text-align: right;
             color: ${props => props.theme.colors.primary};
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
             margin: 10px 0;
             ${media(450)`
-                font-size: 18px;
+                font-size: 20px;
             `}
             ${media(300)`
                 font-size: 14px;

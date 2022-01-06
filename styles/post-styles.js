@@ -16,13 +16,15 @@ const StyledPost = styled.div`
     box-sizing: border-box;
     padding: 10px;
     font-family: "Times New Roman", Times, serif;
-    font-size: calc(18px + (26 - 18) * ((100vw - 260px) / (1700 - 260)));
+    font-size: calc(22px + (26 - 18) * ((100vw - 260px) / (1700 - 260)));
+    line-height: 1.4;
+
     img{
         display: block;
         max-width: 100%;
         margin-left: auto;
     }
-    h2{
+    h2{        
         span{
             background-image: linear-gradient(to right, #FF0080 75%,  #FF0080);
             background-position: 0 100%;

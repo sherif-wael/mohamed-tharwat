@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
         // font-family: 'Markazi Text', serif;
         // font-family: 'Tajawal', sans-serif;
         font-family: "Times New Roman", Times, serif;
+        line-height: 1.3;
     }
     ${transitions};
 `
