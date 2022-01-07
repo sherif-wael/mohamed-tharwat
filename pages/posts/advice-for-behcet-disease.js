@@ -24,7 +24,7 @@ export default function Post(){
                 <h2>
                     <span>نصائح لمرضي بهجت</span>
                 </h2>
-                <img src="/images/behcet's-disease.jpeg" alt="behcet's disease symptoms" />
+                <img src="/images/behcet's-disease2.jpeg" alt="behcet's disease symptoms" />
                 <h3>
                     ما هو مرض بهجت:
                 </h3>
