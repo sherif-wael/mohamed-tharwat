@@ -66,6 +66,12 @@ const StyledPost = styled.div`
             }
         }
     }
+
+    .p-container{
+        p{
+            margin: 16px 0;
+        }
+    }
 `
 
 export default StyledPost
