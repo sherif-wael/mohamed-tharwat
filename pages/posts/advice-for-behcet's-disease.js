@@ -1,24 +1,24 @@
 import Layout from "../../components/layout";
 import PostWrapper from "../../components/post-wrapper";
-import Head from "next/head";
+// import Head from "next/head";
 
-const description = `
-مرض بهجت
-قرح الفم المتكررة
-التهابات الفم
-علاج قرح الفم
-القرح التناسلية
-التهاب العين
-الالتهاب القزحي
-`
+// const description = `
+// مرض بهجت
+// قرح الفم المتكررة
+// التهابات الفم
+// علاج قرح الفم
+// القرح التناسلية
+// التهاب العين
+// الالتهاب القزحي
+// `
 
 export default function Post(){
     return (
         <Layout>
-            <Head>
+            {/* <Head>
                 <title>نصائح لمرضي بهجت</title>
                 <meta name="description" contnet={description} />
-            </Head>
+            </Head> */}
 
             <PostWrapper>
                 <h2>
