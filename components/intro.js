@@ -59,22 +59,23 @@ const StyledHeader = styled.div`
     ${mixins.flexCenter};
     h2{
         position: relative;
-        font-size: 32px;
-        &::after{
-            ${mixins.after};
-            top: 100%;
-            left: 0;
-            height: 10px;
-            background-color: ${props => props.theme.colors.secondary};
-            transform-origin: left;
-            transition: transform 300ms ease;
-        }
-        &:hover::after{
-            transform: scaleX(0);
-            transform-origin: right;
-        }
+        font-size: 34px;
+        margin-bottom: 10px;
+        // &::after{
+        //     ${mixins.after};
+        //     top: 100%;
+        //     left: 0;
+        //     height: 10px;
+        //     background-color: ${props => props.theme.colors.secondary};
+        //     transform-origin: left;
+        //     transition: transform 300ms ease;
+        // }
+        // &:hover::after{
+        //     transform: scaleX(0);
+        //     transform-origin: right;
+        // }
         ${media(400)`
-            font-size: 26px;
+            font-size: 28px;
         `}
     }
 `

@@ -19,12 +19,12 @@ const StyledContainer = styled.div`
 
 const StyledHeader = styled.h2`
     margin-bottom: 35px;
-    span{
-        background-image: linear-gradient(to right, #FF0080 75%,  #FF0080);
-        background-position: 0 100%;
-        background-repeat: repeat-x;
-        background-size: 8px 6px;
-    }
+    // span{
+    //     background-image: linear-gradient(to right, #FF0080 75%,  #FF0080);
+    //     background-position: 0 100%;
+    //     background-repeat: repeat-x;
+    //     background-size: 8px 6px;
+    // }
 `
 
 const StyledPostsWrapper = styled.div`
