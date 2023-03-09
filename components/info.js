@@ -8,7 +8,7 @@ const StyledContainer = styled.section`
     ${mixins.flexColumnCenter};
     ${mixins.sidePaddings};
     margin-top: 80px;
-`
+`;
 
 const StyledInfo = styled.ul`
     padding: 30px 50px;
@@ -23,7 +23,7 @@ const StyledInfo = styled.ul`
     `}
         li{
             text-align: right;
-            color: ${props => props.theme.colors.primary};
+            color: ${(props) => props.theme.colors.primary};
             font-size: 22px;
             font-weight: 600;
             margin: 10px 0;
@@ -35,30 +35,55 @@ const StyledInfo = styled.ul`
             `}
         }
     }
-`
+`;
 
-
-
-function Info(){
+function Info() {
     return (
         <StyledContainer>
-            <Header><h2 style={{textAlign: "center"}}>بالإضافة الى</h2></Header>
-            <StyledInfo dir="rtl" style={{marginBottom: "60px"}}>
-                    <li>مدرس الباطنة و الروماتيزم و المناعة، بكلية الطب، جامعة نيو جيزة</li>
-                    <li>استشاري  الروماتيزم و المناعة بمستشفي دار الفؤاد و مستشفي مصر الدولي</li>
-                    <li><Link href="/clinic"><a>العيادة</a></Link> فيصل : برج الأطباء- اول شارع فيصل- بجانب سوبر ماركت اولاد رجب- الدور العاشر</li>
+            <Header>
+                <h2 style={{ textAlign: "center" }}>بالإضافة الى</h2>
+            </Header>
+            <StyledInfo dir="rtl" style={{ marginBottom: "60px" }}>
+                <li>
+                    ستاذ الباطنة والروماتيزم والمناعة والتهاب الاوعية الدموية
+                    (م)- كلية الطب- جامعة نيوجيزة
+                </li>
+                <li>
+                    استشاري الروماتيزم و المناعة بمستشفي دار الفؤاد و مستشفي مصر
+                    الدولي
+                </li>
+                <li>
+                    <Link href="/clinic">
+                        <a>العيادة</a>
+                    </Link>{" "}
+                    فيصل : برج الأطباء- اول شارع فيصل- بجانب سوبر ماركت اولاد
+                    رجب- الدور العاشر
+                </li>
             </StyledInfo>
-            <Header><h2 style={{textAlign: "center"}}>عضو بهذه الجمعيات</h2></Header>
+            <Header>
+                <h2 style={{ textAlign: "center" }}>عضو بهذه الجمعيات</h2>
+            </Header>
             <StyledInfo dir="rtl">
-                    <li>عضو في الجمعية المصرية لعلم المناعة وأمراض الروماتيزم منذ تأسيسها عام 2011</li>
-                    <li>عضو الكلية الأمريكية للروماتيزم</li>
-                    <li>عضو في مجموعة الدراسة الدولية للمظاهر الكبدية الإضافية المتعلقة بالعدوى بفيروس الالتهاب الكبدي سي (ISG-EHCV)</li>
-                    <li>عضو في المجموعة المصرية للتكلس الوعائي منذ مايو 2017</li>
-                    <li>عضو باتحاد البحر الأبيض المتوسط ​​لدراسة التهاب الأوعية الدموية المرتبط بالكريوجلوبيولينات</li>
-                    <li>عضو في شبكة التحالف الدولي لأمراض التهابات المناعة الذاتية</li>
+                <li>
+                    عضو في الجمعية المصرية لعلم المناعة وأمراض الروماتيزم منذ
+                    تأسيسها عام 2011
+                </li>
+                <li>عضو الكلية الأمريكية للروماتيزم</li>
+                <li>
+                    عضو في مجموعة الدراسة الدولية للمظاهر الكبدية الإضافية
+                    المتعلقة بالعدوى بفيروس الالتهاب الكبدي سي (ISG-EHCV)
+                </li>
+                <li>عضو في المجموعة المصرية للتكلس الوعائي منذ مايو 2017</li>
+                <li>
+                    عضو باتحاد البحر الأبيض المتوسط ​​لدراسة التهاب الأوعية
+                    الدموية المرتبط بالكريوجلوبيولينات
+                </li>
+                <li>
+                    عضو في شبكة التحالف الدولي لأمراض التهابات المناعة الذاتية
+                </li>
             </StyledInfo>
         </StyledContainer>
-    )
+    );
 }
 
-export default Info
+export default Info;

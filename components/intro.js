@@ -43,7 +43,7 @@ const StyledInfo = styled.div`
     text-align: center;
     p {
         font-size: 24px;
-        margin: 15px 0;
+        margin: 15px auto;
         ${media(600)`
             font-size: 22px
         `}
@@ -122,7 +122,7 @@ function Intro() {
                 <StyledHeader>
                     <h2>د/ محمد ثروت حجازى</h2>
                 </StyledHeader>
-                <p>
+                <p style={{ maxWidth: "600px" }}>
                     أستاذ الباطنة والروماتيزم والمناعة والتهاب الاوعية الدموية
                     (م)- كلية الطب- قصر العيني- جامعة القاهرة
                 </p>
