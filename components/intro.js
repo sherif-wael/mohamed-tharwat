@@ -8,7 +8,7 @@ const StyledContainer = styled.section`
     ${mixins.topPaddings};
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.primary};
     // background: radial-gradient(circle at top left,#4a42ec 0%,#521d91 100%);
     // background-color: #521d91;
     align-items: center;
@@ -17,33 +17,31 @@ const StyledContainer = styled.section`
     ${media(1100)`
         grid-template-columns: 1fr;
     `}
-`
-
+`;
 
 const StyledPersonalImage = styled.div`
     box-sizing: border-box;
     padding: 10px;
-    img{
+    img {
         max-width: 100%;
         max-height: 500px;
         border-radius: 15px;
         display: block;
-        transition: transform 300ms ease-out,
-                    box-shadow 300ms ease-out;
-        &:hover{
+        transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+        &:hover {
             transform: translate(-10px, -10px);
-            box-shadow: 15px 15px 4px ${props => props.theme.colors.secondary};
+            box-shadow: 15px 15px 4px ${(props) => props.theme.colors.secondary};
         }
         ${media(1100)`
             margin: 0 auto;
         `}
     }
-`
+`;
 
 const StyledInfo = styled.div`
     color: #fff;
     text-align: center;
-    p{
+    p {
         font-size: 24px;
         margin: 15px 0;
         ${media(600)`
@@ -53,11 +51,11 @@ const StyledInfo = styled.div`
             font-size: 20px;
         `}
     }
-`
+`;
 
 const StyledHeader = styled.div`
     ${mixins.flexCenter};
-    h2{
+    h2 {
         position: relative;
         font-size: 34px;
         margin-bottom: 10px;
@@ -66,7 +64,7 @@ const StyledHeader = styled.div`
         //     top: 100%;
         //     left: 0;
         //     height: 10px;
-        //     background-color: ${props => props.theme.colors.secondary};
+        //     background-color: ${(props) => props.theme.colors.secondary};
         //     transform-origin: left;
         //     transition: transform 300ms ease;
         // }
@@ -78,15 +76,15 @@ const StyledHeader = styled.div`
             font-size: 28px;
         `}
     }
-`
+`;
 
 const StyledPhones = styled.div`
     ${mixins.flexCenter};
     flex-wrap: wrap;
     margin-top: 10px;
-    a{
+    a {
         margin: 10px;
-        background-color: ${props => props.theme.colors.secondary};
+        background-color: ${(props) => props.theme.colors.secondary};
         padding: 7px 15px;
         border-radius: 20px;
         text-decoration: none;
@@ -99,7 +97,7 @@ const StyledPhones = styled.div`
             margin: 0 0 15px;
         }
     `}
-`
+`;
 
 const StyledWave = styled.img`
     position: absolute;
@@ -108,22 +106,29 @@ const StyledWave = styled.img`
     ${media(400)`
         width: 200%;
     `}
-`
+`;
 
-
-
-function Intro(){
+function Intro() {
     return (
         <StyledContainer>
             <StyledWave src="/images/1.png" alt="wave image" />
             <StyledPersonalImage>
-                <img src="/images/personal.jpeg" alt="personal image of dr. Mohamed Tharwat" />
+                <img
+                    src="/images/personal.jpeg"
+                    alt="personal image of dr. Mohamed Tharwat"
+                />
             </StyledPersonalImage>
             <StyledInfo>
-                <StyledHeader><h2>د/ محمد ثروت حجازى</h2></StyledHeader>
-                <p>دكتوراه الباطنة العامة و الروماتيزم و المناعة</p>
-                <p>استشارى و مدرس الباطنة العامة و الروماتيزم و المناعة و التهاب الاوعية الدموية- كلية الطب- قصر العيني- جامعة القاهرة</p>
-                <p>زميل الكلية الامريكية للروماتيزم </p>
+                <StyledHeader>
+                    <h2>د/ محمد ثروت حجازى</h2>
+                </StyledHeader>
+                <p>
+                    أستاذ الباطنة والروماتيزم والمناعة والتهاب الاوعية الدموية
+                    (م)- كلية الطب- قصر العيني- جامعة القاهرة
+                </p>
+                <p>استشاري الباطنة والروماتيزم والمناعة</p>
+                <p>زميل الكلية الأمريكية للروماتيزم</p>
+                <p>زميل الكلية الملكية البريطانية للأطباء بأدنبرة</p>
                 <p>العيادة: برج الاطباء - اول شارع فيصل - الدور العاشر</p>
                 <StyledPhones>
                     <a href="tel:+01272901101">01272901101</a>
@@ -134,7 +139,7 @@ function Intro(){
                 </StyledPhones>
             </StyledInfo>
         </StyledContainer>
-    )
+    );
 }
 
-export default Intro
+export default Intro;
