@@ -108,6 +108,12 @@ const StyledWave = styled.img`
     `}
 `;
 
+const StyledDisclaimer = styled.div`
+    color: ${(props) => props.theme.colors.secondary};
+    font-size: 24px;
+    font-weight: 900;
+`
+
 function Intro() {
     return (
         <StyledContainer>
@@ -130,6 +136,9 @@ function Intro() {
                 <p>زميل الكلية الأمريكية للروماتيزم</p>
                 <p>زميل الكلية الملكية البريطانية للأطباء بأدنبرة</p>
                 <p>العيادة: برج الاطباء - اول شارع فيصل - الدور العاشر</p>
+                <StyledDisclaimer>
+                الحجز مسبقا لتحديد أقرب ميعاد متاح
+                </StyledDisclaimer>
                 <StyledPhones>
                     <a href="tel:+01272901101">01272901101</a>
                     <a href="tel:01092909409">01092909409</a>

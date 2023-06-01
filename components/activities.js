@@ -150,7 +150,7 @@ function Activities(){
             <StyledActivites>
                     {
                         displayedActivities.map(({img, header, ankers}, i) => (
-                            <CSSTransition key={i} timeout={500} classNames="fadeup" in={true} appear key={i}>
+                            <CSSTransition key={i} timeout={500} classNames="fadeup" in={true} appear>
                                 <StyledActivity>
                                     <StyledImg>
                                         <img src={img} alt="activity img" />
