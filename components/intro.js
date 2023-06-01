@@ -126,7 +126,7 @@ function Intro() {
             </StyledPersonalImage>
             <StyledInfo>
                 <StyledHeader>
-                    <h2>د/ محمد ثروت حجازى</h2>
+                    <h2>أ.د/ محمد ثروت حجازي</h2>
                 </StyledHeader>
                 <p style={{ maxWidth: "600px" }}>
                     أستاذ الباطنة والروماتيزم والمناعة والتهاب الاوعية الدموية
